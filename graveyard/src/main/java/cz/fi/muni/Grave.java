@@ -10,11 +10,10 @@ public class Grave {
 
 	private List<Corpse> corpses = new ArrayList<>();
 
-	public Grave(int depth, String tombStoneDescription, List<Corpse> corpses) {
+	public Grave(int depth, String tombStoneDescription) {
 		super();
 		this.depth = depth;
 		this.tombStoneDescription = tombStoneDescription;
-		this.corpses = corpses;
 	}
 
 	public int getDepth() {
