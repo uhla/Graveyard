@@ -15,13 +15,18 @@ public class App {
 		graveManager.addCorpse(pugsley);
 		graveManager.addCorpse(morticia);
 
+		System.out.println("Inspecting grave of " + grave.getTombStoneDescription());
+		for (Corpse corpse : grave.getCorpses()) {
+			System.out.println(corpse);
+		}
+		System.out.println();
+		
 		try {
 			Corpse corpseInInspection = graveManager.inspectCorpse("Pugsley", "Addams");
-			System.out.println(corpseInInspection);
+			System.out.println("Inspecting corpse: " + corpseInInspection);
 
 			corpseInInspection = graveManager.inspectCorpse("Frankie", "Addams");
-			System.out.println(corpseInInspection);
-
+			System.out.println("Inspecting corpse: " + corpseInInspection);
 		} catch (Exception ex) {
 			System.err.println(ex.getMessage());
 		}
